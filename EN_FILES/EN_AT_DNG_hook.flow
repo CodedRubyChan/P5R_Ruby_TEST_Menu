@@ -1,0 +1,21 @@
+import( "EN_AT_DNG.BF" );
+import( "EN_TestMenu.flow" );
+
+void CallOriginalSquareMenu()
+{
+    auto_recover();
+}
+
+void at_dng_square_menu_hook()
+{
+    TestMenuDisplay();
+}
+
+void at_dng_start_menu_hook()
+{
+	FLD_PANEL_DISP( 0 );
+	SAVE();
+	SAVE_UI_SYNC();
+	SAVE_SYNC();
+	FLD_PANEL_DISP( 1 );
+}
